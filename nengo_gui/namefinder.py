@@ -1,8 +1,7 @@
 import nengo
 
 class NameFinder(object):
-    def __init__(self, terms, net):
-        self.base_terms = terms
+    def __init__(self, net):
         self.known_name = {}
         for k, v in terms.items():
             if not k.startswith('_'):

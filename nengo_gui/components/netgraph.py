@@ -108,7 +108,7 @@ class NetGraph(Component):
         if self.page.error is not None:
             return
 
-        name_finder = nengo_gui.NameFinder(self.page.locals, self.page.model)
+        name_finder = nengo_gui.NameFinder(self.page.model)
 
         self.networks_to_search = [self.page.model]
         self.parents = {}

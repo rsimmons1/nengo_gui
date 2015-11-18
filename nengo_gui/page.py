@@ -150,7 +150,7 @@ class Page(object):
             self.locals['model'] = self.model
 
         # figure out good names for objects
-        self.name_finder = nengo_gui.NameFinder(self.locals, self.model)
+        self.name_finder = nengo_gui.NameFinder(self.model)
         self.default_labels = self.name_finder.known_name
 
         # load the .cfg file
