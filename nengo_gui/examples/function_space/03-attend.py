@@ -43,7 +43,7 @@ with model:
         stimulus = fs.make_stimulus_node()
         stimulus.label = 'stim%d' % i
         nengo.Connection(stimulus, ens)
-        stim_control = nengo.Node([1, 0, 0, 0.2], label='stim_control %d' % i)
+        stim_control = nengo.Node([1, 0, 0.2], label='stim_control %d' % i)
         nengo.Connection(stim_control, stimulus)
     
     plot = fs.make_plot_node(lines=2, n_pts=50)
